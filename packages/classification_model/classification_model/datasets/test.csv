@@ -1,0 +1,5 @@
+message,case_type,message_source
+Please help me to cancel my order.,cancel_order,customer
+"I paid for an order last week, what the hell is going on?",order_status,customer
+I want to cancel my order please. Can you help me?,cancel_order,customer
+Where is my order? I haven't received anything ,order_status,customer
