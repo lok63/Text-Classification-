@@ -3,11 +3,14 @@ import math
 from classification_model.predict import make_prediction
 from classification_model.processing.data_management import load_dataset
 import numpy as np
+import json
 
 def test_make_single_prediction():
     # Given
     test_data = load_dataset(file_name='test.csv')
     single_test_json = test_data[0:1].to_json(orient='records')   # Get a single instance
+
+
 
     # When
     subject = make_prediction(input_data=single_test_json)        #Call the clf to make a prediction
@@ -26,6 +29,9 @@ def test_make_multiple_predictions():
     multiple_test_json = test_data.to_json(orient='records')
 
     true_predictions = [0,1,0,1]
+
+    print("#####################")
+    print(multiple_test_json)
 
     # When
     subject = make_prediction(input_data=multiple_test_json)
