@@ -23,7 +23,7 @@ Create and activate a virtual environment. You can use conda or virtualenv. Make
  There is a chance that when you run the following commands, you will get a NoModuleFound "module_name". If this happens please navigate to that specific directory and paste the following commands on your terminal
 
 ##### Unix based system
-    echo PYTHONPATH='pwd'
+    export PYTHONPATH='pwd'
 
 ##### Windows
     set PYTHONPATH='pwd'   
