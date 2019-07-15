@@ -3,9 +3,15 @@ import pandas as pd
 
 from classification_model.processing.data_management import load_pipeline
 from classification_model.config import config
+from classification_model.processing.validation import validate_inputs
+from classification_model import __version__ as _version
+
+import logging
 
 
-pipeline_file_name = 'classification_model.pkl'
+_logger = logging.getLogger(__name__)
+
+pipeline_file_name = f'{config.PIPELINE_SAVE_FILE}{_version}.pkl'
 _full_pipe = load_pipeline(file_name=pipeline_file_name)
 
 
@@ -13,8 +19,15 @@ def make_prediction(input_data):
     """Make a prediction using the saved model pipeline."""
 
     data = pd.read_json(input_data)
-    prediction = _full_pipe.predict(data[config.FEATURES])
-    proba = _full_pipe.predict_proba(data[config.FEATURES])
-    response = {'predictions': prediction}
+    validated_data = validate_inputs(input_data=data)
+    prediction = _full_pipe.predict(validated_data[config.FEATURES])
+    output = prediction
 
-    return response
+    results = {'predictions': output, 'version': _version}
+
+    _logger.info(
+        f'Making predictions with model version: {_version} '
+        f'Inputs: {validated_data} '
+        f'Predictions: {results}')
+
+    return results

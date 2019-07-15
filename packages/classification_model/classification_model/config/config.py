@@ -15,3 +15,9 @@ TARGET = 'case_type'
 
 # variables
 FEATURES = "message"
+
+PIPELINE_NAME = 'classification'
+PIPELINE_SAVE_FILE = f'{PIPELINE_NAME}_output_v'
+
+# used for differential testing
+ACCEPTABLE_MODEL_DIFFERENCE = 0.05
