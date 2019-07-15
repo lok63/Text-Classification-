@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: classification-model
+Version: 0.1.0
+Summary: Train and deploy a text classification model.
+Home-page: Text-Classification-
+Author: Leonidas Constantinou
+Author-email: leonidasc94@gmail.com
+License: MIT
+Description: Train and deploy a text classification model.
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown

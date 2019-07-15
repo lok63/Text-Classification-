@@ -5,7 +5,7 @@ from api.config import get_logger
 _logger = get_logger(logger_name=__name__)
 
 
-def create_app(*, config_object) -> Flask:
+def create_app(*, config_object):
     """Create a flask app instance."""
 
     flask_app = Flask('ml_api')

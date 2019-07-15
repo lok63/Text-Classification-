@@ -10,6 +10,7 @@ DATASET_DIR = PACKAGE_ROOT / 'datasets'
 
 # data
 TRAINING_DATA_FILE = 'tech_test_data-1.csv'
+TESTING_DATA_FILE = 'test.csv'
 TARGET = 'case_type'
 
 
