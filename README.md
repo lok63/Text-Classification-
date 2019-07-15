@@ -56,10 +56,7 @@ Now you can make post call to the api on the following endpoint:
 You can use postman or run this command on the terminal
 
 
-    curl --header "Content-Type: application/json" \
-  --request POST \
-  --data '{"message": "Where is my product? It's been a week"}' \
-  127.0.0.1:5000/v1/predict/classification
+    curl --header "Content-Type: application/json" --request POST --data '{"message": "Where is my product? It's been a week"}' 127.0.0.1:5000/v1/predict/classification
 
 
 #### Test the api package
