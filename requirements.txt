@@ -74,4 +74,4 @@ Werkzeug==0.15.4
 widgetsnbextension==3.5.0
 zipp==0.5.2
 setuptools==40.6.3
-wheel==0.32.3
+wheel==0.38.1
